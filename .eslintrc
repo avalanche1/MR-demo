@@ -1,0 +1,49 @@
+{
+	//https://medium.com/@jzarzoso/setting-eslint-on-meteor-for-react-development-10af658b44e2
+	"plugins": ["flowtype", "fp", "immutable", "import", "jest", "react", "meteor", "promise"],
+	"env": {
+		"node": true,
+		"browser": true,
+		"jest/globals": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:flowtype/recommended",
+		"plugin:fp/recommended",
+		"plugin:import/warnings",
+		"plugin:jest/recommended",
+		"plugin:react/recommended",
+		"plugin:meteor/recommended",
+		"plugin:promise/recommended"
+	],
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaVersion": 8,
+		"ecmaFeatures": {
+			"jsx": true,
+			"experimentalObjectRestSpread": true
+		}
+	},
+	"rules": {
+		"fp/no-mutating-methods": [
+			"error",
+			{
+				// Allow using Lodash methods
+				"allowedObjects": ["_"]
+			}
+		],
+		"fp/no-unused-expression": "off",
+		"immutable/no-mutation": "error",
+		"no-unused-vars": "warn",
+		"no-var": "error",
+		"no-undef": "error",
+		"no-param-reassign": "error"
+	},
+	"settings": {
+		"flowtype": {
+			// Lint all files, no matter if they have '@flow' annotation
+			"onlyFilesWithFlowAnnotation": false
+		}
+	}
+}

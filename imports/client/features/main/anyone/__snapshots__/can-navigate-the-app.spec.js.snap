@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Anyone can navigate the app Navbar component renders correctly 1`] = `
+<div
+  className="ant-layout-header"
+/>
+`;
